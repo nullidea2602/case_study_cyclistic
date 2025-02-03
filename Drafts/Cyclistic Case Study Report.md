@@ -71,7 +71,7 @@ To assess data credibility, we applied the ROCCC framework:
 - Comprehensive: The dataset includes all recorded rides within the specified timeframe.
 - Current: The dataset is updated up to the last available month (2024-12).
 - Cited: The source of the data is properly referenced.
-- - Citation: Divvy. (n.d.). Divvy Bicycle Sharing System Data. Retrieved from [Divvy System Data](https://divvybikes.com/system-data).
+	- Citation: Divvy. (n.d.). Divvy Bicycle Sharing System Data. Retrieved from [Divvy System Data](https://divvybikes.com/system-data).
 
 ## Legal and Ethical Considerations
 - Data License Agreement: Governed by the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement)
