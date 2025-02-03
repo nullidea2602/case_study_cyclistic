@@ -1,5 +1,3 @@
-Cyclistic Case Study Report
-
 # Introduction
 # Business Task
 # Data Sources

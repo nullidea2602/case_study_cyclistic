@@ -1,5 +1,5 @@
 # Case study: How does a bike-share navigate speedy success?
-## Objective
+
 #### You will produce a report with the following deliverables:
 1. A clear statement of the business task
 2. A description of all data sources used
