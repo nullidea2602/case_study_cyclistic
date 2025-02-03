@@ -75,10 +75,10 @@ To assess data credibility, we applied the ROCCC framework:
 
 ## Legal and Ethical Considerations
 - Data License Agreement: Governed by the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement)
-- - Allows reproduction, analysis, and modification of data for lawful purposes.
-    - Prohibits resale or redistribution of raw data as a standalone dataset.
+	- Allows reproduction, analysis, and modification of data for lawful purposes.
+	- Prohibits resale or redistribution of raw data as a standalone dataset.
 - Privacy & Security: No personally identifiable information (PII) is included in the dataset.
-- - Pass purchases are not linked to credit card information or user identities.
+	- Pass purchases are not linked to credit card information or user identities.
 - Accessibility: The dataset is freely available to the public via official sources.
 
 ## Data Integrity Verification
