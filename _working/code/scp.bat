@@ -1,0 +1,1 @@
+scp C:\Users\randa\Documents\case_study_cyclistic\data_clean\*.csv nullidea@192.168.0.205:/home/nullidea/case_study_cyclistic/data/
