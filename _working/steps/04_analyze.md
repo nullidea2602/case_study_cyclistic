@@ -31,24 +31,32 @@ Open your spreadsheet application, then complete the following steps:
 	1. Calculate the mean of ride_length
 	2. Calculate the max ride_length
 	3. Calculate the mode of day_of_week
-5. Create a pivot table to quickly calculate and visualize the data. Options:
+```sql
+select
+    avg(trip_duration_seconds / 60) as avg_trip_duration_m,
+    min(trip_duration_seconds / 60) as min_trip_duration_m,
+    max(trip_duration_seconds / 60) as max_trip_duration_m
+from
+    bike_rides
+```
+1. Create a pivot table to quickly calculate and visualize the data. Options:
 	1. Calculate the average ride_length for members and casual riders. Try rows = member_casual; Values = Average of ride_length.
 	2. Calculate the average ride_length for users by day_of_week. Try columns = day_of_week; Rows = member_casual; Values = Average of ride_length.
 	3. Calculate the number of rides for users by day_of_week by adding Count of trip_id to Values.
-6. Open another file and perform the same descriptive analysis steps. Explore different seasons to make some initial observations.
-7. Once you have spent some time working with the individual spreadsheets, merge them into a full-year view. Do this with the tool you have chosen to use to perform your final analysis, either a spreadsheet, a database and SQL, or R Studio.
-8. Export a summary file for further analysis.
+2. Open another file and perform the same descriptive analysis steps. Explore different seasons to make some initial observations.
+3. Once you have spent some time working with the individual spreadsheets, merge them into a full-year view. Do this with the tool you have chosen to use to perform your final analysis, either a spreadsheet, a database and SQL, or R Studio.
+4. Export a summary file for further analysis.
 ### Follow these steps for using SQL
 Open your SQL tool of choice, then complete the following steps:
-1. Import your data.
-2. Explore your data, perhaps looking at the total number of rows, distinct values, maximum, minimum, or mean values.
-3. Where relevant, use JOIN statements to combine your relevant data into one table.
-4. Create summary statistics.
-5. Investigate interesting trends and save that information to a table.
+5. Import your data.
+6. Explore your data, perhaps looking at the total number of rows, distinct values, maximum, minimum, or mean values.
+7. Where relevant, use JOIN statements to combine your relevant data into one table.
+8. Create summary statistics.
+9. Investigate interesting trends and save that information to a table.
 ### Follow these steps for using R
 Open your preferred version of R, click this link, and select “Use template.” Then, copy and paste the text from the template into an R script.
-1. Import your data from Divvy 2019 Q1 and Divvy 2020 Q1.
-2. Make columns consistent and merge them into a single dataframe.
-3. Clean up and add data to prepare for analysis.
-4. Conduct descriptive analysis.
-5. Export a summary file for further analysis.
+10. Import your data from Divvy 2019 Q1 and Divvy 2020 Q1.
+11. Make columns consistent and merge them into a single dataframe.
+12. Clean up and add data to prepare for analysis.
+13. Conduct descriptive analysis.
+14. Export a summary file for further analysis.

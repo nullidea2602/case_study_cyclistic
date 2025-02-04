@@ -13,13 +13,6 @@ From these insights, the marketing analytics team will make recommendations on h
 
 The recommendations will be submitted to the Executive team for approval. Upon approval, your team will use these insights to design a new marketing strategy to convert casual riders into annual members.
 
-## Constraints
-
-Data-privacy issues prohibit us from using riders’ personally identifiable information. This means that we won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
-
-## Data License Agreement
-[DivvyBikes Data License Agreement](https://divvybikes.com/data-license-agreement)
-
 # Data Sources
 
 For this analysis, we are utilizing Cyclistic's historical trip data, sourced from the Divvy bike-sharing system operated by Lyft Bikes and Scooters, LLC in partnership with the City of Chicago. The data covers all recorded trips within the specified timeframe and is publicly available for research and analysis.
@@ -32,6 +25,19 @@ For this analysis, we are utilizing Cyclistic's historical trip data, sourced fr
 #### Data Organization
 - The dataset consists of one CSV file per month, each containing trip details.
 - Key columns in the dataset:
+	- Ride ID
+	- Rideable Type
+	- Start Date and Time
+	- End Date and Time
+	- Start Station Name
+	- End Station Name
+	- Start Station ID
+	- End Station ID
+	- Start Latitude
+	- Start Longitude
+	- End Latitude
+	- End Longitude
+	- Member or Casual
 
 ```
 ride_id //Unique identifier (alphanumeric)  
@@ -44,7 +50,7 @@ member_casual //User type (casual or member)
 ```
 
 #### Data Storage & SQL Schema
-- The dataset is structured in a SQL table as follows:
+- The dataset could be structured in a SQL table as follows:
 
 ```
 CREATE TABLE bike_rides (  
@@ -87,24 +93,6 @@ To ensure accuracy and reliability, the following steps were performed:
 - Initial review of raw CSV files
 - Validation of data types and structure
 - Import into SQL database, noting duplicate `ride_id` values
-- Removal of 422 duplicate records using SQL script:
-
-```
-WITH Duplicates AS (  
-    SELECT *,  
-           ROW_NUMBER() OVER (  
-               PARTITION BY ride_id  
-               ORDER BY started_at ASC  
-           ) AS row_num  
-    FROM bike_rides  
-)  
-DELETE FROM bike_rides  
-WHERE ride_id IN (  
-    SELECT ride_id FROM Duplicates WHERE row_num > 1  
-);
-```
-
-- Further validation using Power BI to check for missing values and inconsistencies.
 
 ## Relevance to the Analysis
 
@@ -120,11 +108,22 @@ This dataset is crucial for analyzing ridership trends based on user type. By se
 - Duplicate `ride_id` entries: Found 422 duplicate entries, resolved via SQL cleanup.
 - Missing data: Some station names and GPS coordinates contain blanks.
 - Cross-month rides: Some trips start in one month and end in the next, requiring careful time-based analysis.
+## Constraints
 
+Data-privacy issues prohibit us from using riders’ personally identifiable information. This means that we won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
+
+## Data License Agreement
+[DivvyBikes Data License Agreement](https://divvybikes.com/data-license-agreement)
 # Data Cleaning Process
 
+TODO
 # Analysis Summary & Findings
 
+TODO
 # Visualizations & Key Insights
 
+TODO
 # Recommendations
+1. x
+2. x
+3. x

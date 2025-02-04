@@ -47,21 +47,4 @@ do
     sudo -u postgres psql -d "$DB_NAME" -c "\copy $TABLE_NAME FROM '$file' WITH CSV HEADER";
 done
 
-# Run SQL commands
-sudo -u postgres psql <<EOF
-\c $DB_NAME
-
-WITH Duplicates AS (
-    SELECT *,
-           ROW_NUMBER() OVER (
-               PARTITION BY ride_id
-               ORDER BY started_at ASC  -- Keep the earliest ride if duplicates exist
-           ) AS row_num
-    FROM $TABLE_NAME
-)
-DELETE FROM $TABLE_NAME
-WHERE ride_id IN (
-    SELECT ride_id FROM Duplicates WHERE row_num > 1
-);
-ALTER TABLE $TABLE_NAME ADD PRIMARY KEY (ride_id);
-EOF
+echo "PostgreSQL setup completed successfully."
